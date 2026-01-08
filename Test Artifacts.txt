@@ -1,0 +1,24 @@
+# Setup
+init 1024
+init_vm 5
+init_cache 4 8
+
+# Allocation Pattern
+set allocator buddy
+malloc 70
+malloc 200
+dump
+
+# Cache & Virtual Access Pattern
+v_access 0
+v_access 0
+v_access 64
+v_access 128
+v_access 192
+v_access 256
+
+# Cleanup Pattern
+free 1
+free 2
+dump
+report
